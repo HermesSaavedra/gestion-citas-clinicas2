@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Establecer imagen de fondo */
 .App {
   background-image: url('https://via.placeholder.com/1500x800'); /* Reemplaza con tu imagen */
@@ -45,4 +46,102 @@
   padding-top: 60px; /* Esto asegura que el contenido no se solape con los botones */
   color: white;
   text-align: center;
+=======
+/* App.css */
+
+.app-container {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f7fa;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.button-primary, .button-secondary {
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+.button-primary {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+.button-primary:hover {
+  background-color: #45a049;
+}
+
+.button-secondary {
+  background-color: #008CBA;
+  color: white;
+  border: none;
+}
+
+.button-secondary:hover {
+  background-color: #005f6b;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+>>>>>>> 6ac5aef (La interfaz del menu)
 }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './App.css';  // Asegúrate de tener un archivo CSS con los estilos
 
 function App() {
   const [nombre, setNombre] = useState("");
@@ -10,66 +11,43 @@ function App() {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h1>Plataforma de Gestión Médica</h1>
-      
-      <button onClick={() => alert("Agendar Cita")} style={styles.button}>
-        Agendar Cita
-      </button>
-      
-      <button onClick={() => alert("Ver Expedientes")} style={styles.button}>
-        Ver Expedientes
-      </button>
+    <div className="app-container">
+      <header>
+        <h1>Plataforma de Gestión Médica</h1>
+        <p>Organiza citas y gestiona expedientes de tus pacientes.</p>
+      </header>
 
-      <h2>Ingresar Datos</h2>
-      <form onSubmit={handleSubmit} style={styles.form}>
-        <input
-          type="text"
-          placeholder="Nombre"
-          value={nombre}
-          onChange={(e) => setNombre(e.target.value)}
-          style={styles.input}
-        />
-        <input
-          type="email"
-          placeholder="Correo Electrónico"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          style={styles.input}
-        />
-        <button type="submit" style={styles.submitButton}>Enviar</button>
-      </form>
+      <div className="action-buttons">
+        <button onClick={() => alert("Agendar Cita")} className="button-primary">
+          Agendar Cita
+        </button>
+        <button onClick={() => alert("Ver Expedientes")} className="button-secondary">
+          Ver Expedientes
+        </button>
+      </div>
+
+      <div className="form-container">
+        <h2>Ingresar Datos</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Nombre"
+            value={nombre}
+            onChange={(e) => setNombre(e.target.value)}
+            className="input-field"
+          />
+          <input
+            type="email"
+            placeholder="Correo Electrónico"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="input-field"
+          />
+          <button type="submit" className="submit-button">Enviar</button>
+        </form>
+      </div>
     </div>
   );
 }
-
-const styles = {
-  button: {
-    margin: "10px",
-    padding: "10px 20px",
-    fontSize: "16px",
-    cursor: "pointer",
-  },
-  form: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-  },
-  input: {
-    margin: "5px",
-    padding: "10px",
-    fontSize: "16px",
-    width: "200px",
-  },
-  submitButton: {
-    marginTop: "10px",
-    padding: "10px",
-    fontSize: "16px",
-    backgroundColor: "blue",
-    color: "white",
-    border: "none",
-    cursor: "pointer",
-  },
-};
 
 export default App;
