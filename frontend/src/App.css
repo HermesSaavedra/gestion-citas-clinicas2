@@ -1,147 +1,70 @@
-<<<<<<< HEAD
-/* Establecer imagen de fondo */
-.App {
-  background-image: url('https://via.placeholder.com/1500x800'); /* Reemplaza con tu imagen */
-  background-size: cover;
-  background-position: center;
-  height: 100vh; /* Esto asegura que cubra toda la altura de la ventana */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-/* Estilo para los botones sobre la imagen */
-.button-container {
-  position: fixed; /* Esto hace que los botones se queden fijos sobre la imagen */
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%); /* Esto los centra horizontalmente */
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-  padding: 10px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center; /* Centra los botones */
-  z-index: 2; /* Asegura que los botones estén por encima de la imagen */
-}
-
-/* Estilo de los botones */
-.App-button {
-  background-color: #4CAF50; /* Color verde */
-  color: white;
-  padding: 10px 20px;
-  margin: 0 10px; /* Espaciado entre los botones */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-/* Efecto hover */
-.App-button:hover {
-  background-color: #45a049; /* Un verde más oscuro al pasar el mouse */
-}
-
-/* Ajustar el contenido principal */
-.App-header {
-  padding-top: 60px; /* Esto asegura que el contenido no se solape con los botones */
-  color: white;
-  text-align: center;
-=======
-/* App.css */
-
 .app-container {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 20px;
-  background-color: #f4f7fa;
+  text-align: center;
+  font-family: Arial, sans-serif;
 }
 
 header {
-  background-color: #4CAF50;
+  background-color: #007bff;
   color: white;
-  padding: 20px;
-  text-align: center;
-  border-radius: 10px;
-}
-
-h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-
-p {
-  font-size: 1.1rem;
+  padding: 15px;
 }
 
 .action-buttons {
-  display: flex;
-  justify-content: center;
-  margin: 30px 0;
+  margin: 20px;
 }
 
-.button-primary, .button-secondary {
-  padding: 15px 30px;
-  font-size: 16px;
-  cursor: pointer;
+button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
   border-radius: 5px;
-  margin: 0 10px;
+  cursor: pointer;
 }
 
 .button-primary {
-  background-color: #4CAF50;
+  background-color: #28a745;
   color: white;
-  border: none;
-}
-
-.button-primary:hover {
-  background-color: #45a049;
 }
 
 .button-secondary {
-  background-color: #008CBA;
+  background-color: #17a2b8;
   color: white;
-  border: none;
 }
 
-.button-secondary:hover {
-  background-color: #005f6b;
+.button-tertiary {
+  background-color: #ffc107;
+  color: black;
+}
+
+.button-warning {
+  background-color: #fd7e14;
+  color: white;
+}
+
+.button-settings {
+  background-color: #6c757d;
+  color: white;
 }
 
 .form-container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .input-field {
-  width: 100%;
+  display: block;
+  margin: 10px auto;
   padding: 10px;
-  margin: 10px 0;
-  font-size: 16px;
+  width: 80%;
+  max-width: 300px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
 .submit-button {
-  width: 100%;
-  padding: 10px;
-  background-color: #4CAF50;
+  background-color: #007bff;
   color: white;
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
   cursor: pointer;
-}
-
-.submit-button:hover {
-  background-color: #45a049;
->>>>>>> 6ac5aef (La interfaz del menu)
 }

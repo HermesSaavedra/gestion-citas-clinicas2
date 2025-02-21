@@ -1,43 +1,13 @@
 import React, { useState } from "react";
-import './App.css';  // Asegúrate de tener un archivo CSS con los estilos
+import "./App.css"; // Asegúrate de tener un archivo CSS con estilos
 
 function App() {
-<<<<<<< HEAD
+  const [nombre, setNombre] = useState("");
+  const [email, setEmail] = useState("");
+
   const handleButtonClick = (buttonName) => {
     alert(`Botón de ${buttonName} presionado`);
   };
-
-  return (
-    <div className="App">
-      {/* Botones */}
-      <div className="button-container">
-        <button className="App-button" onClick={() => handleButtonClick('Citas')}>
-          Citas
-        </button>
-        <button className="App-button" onClick={() => handleButtonClick('Doctores')}>
-          Doctores
-        </button>
-      </div>
-
-      {/* Imagen de fondo */}
-      <div className="background-image">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-=======
-  const [nombre, setNombre] = useState("");
-  const [email, setEmail] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -51,15 +21,23 @@ function App() {
         <p>Organiza citas y gestiona expedientes de tus pacientes.</p>
       </header>
 
-      <div className="action-buttons">
-        <button onClick={() => alert("Agendar Cita")} className="button-primary">
+      {/* Botones de acción */}
+      <div className="button-container">
+        <button className="App-button" onClick={() => handleButtonClick("Citas")}>
+          Citas
+        </button>
+        <button className="App-button" onClick={() => handleButtonClick("Doctores")}>
+          Doctores
+        </button>
+        <button className="button-primary" onClick={() => alert("Agendar Cita")}>
           Agendar Cita
         </button>
-        <button onClick={() => alert("Ver Expedientes")} className="button-secondary">
+        <button className="button-secondary" onClick={() => alert("Ver Expedientes")}>
           Ver Expedientes
         </button>
       </div>
 
+      {/* Formulario */}
       <div className="form-container">
         <h2>Ingresar Datos</h2>
         <form onSubmit={handleSubmit}>
@@ -77,9 +55,10 @@ function App() {
             onChange={(e) => setEmail(e.target.value)}
             className="input-field"
           />
-          <button type="submit" className="submit-button">Enviar</button>
+          <button type="submit" className="submit-button">
+            Enviar
+          </button>
         </form>
->>>>>>> 6ac5aef (La interfaz del menu)
       </div>
     </div>
   );

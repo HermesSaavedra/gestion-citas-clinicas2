@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './App.css';  // Asegúrate de tener un archivo CSS con los estilos
+import "./App.css"; // Asegúrate de tener un archivo CSS con los estilos
 
 function App() {
   const [nombre, setNombre] = useState("");
@@ -23,6 +23,15 @@ function App() {
         </button>
         <button onClick={() => alert("Ver Expedientes")} className="button-secondary">
           Ver Expedientes
+        </button>
+        <button onClick={() => alert("Gestionar Pacientes")} className="button-tertiary">
+          Gestionar Pacientes
+        </button>
+        <button onClick={() => alert("Enviar Recordatorio")} className="button-warning">
+          Enviar Recordatorio
+        </button>
+        <button onClick={() => alert("Configuraciones")} className="button-settings">
+          Configuraciones
         </button>
       </div>
 
