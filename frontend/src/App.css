@@ -2,6 +2,7 @@
 .app-container {
   text-align: center;
   font-family: Arial, sans-serif;
+  padding: 20px;
 }
 
 /* Estilos del encabezado */
@@ -49,7 +50,7 @@ header {
 
 /* Estilos de los botones */
 .action-buttons {
-  margin: 20px;
+  margin: 20px 0;
 }
 
 button {
@@ -62,6 +63,7 @@ button {
   transition: background 0.3s ease-in-out;
 }
 
+/* Botón primario */
 .button-primary {
   background-color: #28a745;
   color: white;
@@ -71,6 +73,7 @@ button {
   background-color: #218838;
 }
 
+/* Botón secundario */
 .button-secondary {
   background-color: #17a2b8;
   color: white;
@@ -80,6 +83,7 @@ button {
   background-color: #138496;
 }
 
+/* Botón terciario */
 .button-tertiary {
   background-color: #ffc107;
   color: black;
@@ -89,6 +93,7 @@ button {
   background-color: #e0a800;
 }
 
+/* Botón de advertencia */
 .button-warning {
   background-color: #fd7e14;
   color: white;
@@ -98,6 +103,7 @@ button {
   background-color: #e8590c;
 }
 
+/* Botón de configuración */
 .button-settings {
   background-color: #6c757d;
   color: white;
@@ -120,6 +126,7 @@ button {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Campos de entrada */
 .input-field {
   display: block;
   margin: 10px auto;
@@ -131,6 +138,7 @@ button {
   font-size: 16px;
 }
 
+/* Botón de envío */
 .submit-button {
   background-color: #007bff;
   color: white;
