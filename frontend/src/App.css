@@ -1,14 +1,53 @@
+/* Estilos generales */
 .app-container {
   text-align: center;
   font-family: Arial, sans-serif;
 }
 
+/* Estilos del encabezado */
 header {
   background-color: #007bff;
   color: white;
   padding: 15px;
 }
 
+/* Estilos de la barra de navegación */
+.navbar {
+  background-color: #004080;
+  padding: 15px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li {
+  display: inline;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: background 0.3s;
+}
+
+.navbar ul li a:hover {
+  background-color: #003366;
+  border-radius: 5px;
+}
+
+/* Estilos del contenido */
+.content {
+  margin-top: 20px;
+}
+
+/* Estilos de los botones */
 .action-buttons {
   margin: 20px;
 }
@@ -19,6 +58,8 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease-in-out;
 }
 
 .button-primary {
@@ -26,9 +67,17 @@ button {
   color: white;
 }
 
+.button-primary:hover {
+  background-color: #218838;
+}
+
 .button-secondary {
   background-color: #17a2b8;
   color: white;
+}
+
+.button-secondary:hover {
+  background-color: #138496;
 }
 
 .button-tertiary {
@@ -36,9 +85,17 @@ button {
   color: black;
 }
 
+.button-tertiary:hover {
+  background-color: #e0a800;
+}
+
 .button-warning {
   background-color: #fd7e14;
   color: white;
+}
+
+.button-warning:hover {
+  background-color: #e8590c;
 }
 
 .button-settings {
@@ -46,8 +103,21 @@ button {
   color: white;
 }
 
+.button-settings:hover {
+  background-color: #545b62;
+}
+
+/* Estilos del formulario */
 .form-container {
   margin-top: 20px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .input-field {
@@ -58,6 +128,7 @@ button {
   max-width: 300px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 16px;
 }
 
 .submit-button {
@@ -67,4 +138,18 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease-in-out;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Mensajes */
+.mensaje {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #28a745;
 }
