@@ -161,3 +161,107 @@ button {
   font-weight: bold;
   color: #28a745;
 }
+
+/* -------------------------------- */
+/* 🔥 NUEVOS ESTILOS PARA Home.js 🔥 */
+/* -------------------------------- */
+
+/* Contenedor principal del Home */
+.home-container {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos del encabezado */
+.home-header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Sección de información */
+.home-info {
+  margin: 20px 0;
+}
+
+.home-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.home-info li {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Botón de inicio */
+.home-start {
+  margin: 20px;
+}
+
+.btn-primary {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #218838;
+}
+
+/* Pie de página */
+.home-footer {
+  margin-top: 30px;
+  font-size: 14px;
+  color: gray;
+}
+
+/* Contenedor de pacientes */
+.pacientes-container {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Barra de búsqueda */
+.search-input {
+  padding: 10px;
+  width: 80%;
+  max-width: 300px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Tabla de pacientes */
+.pacientes-table {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  border-collapse: collapse;
+}
+
+.pacientes-table th,
+.pacientes-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.pacientes-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.pacientes-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
