@@ -7,3 +7,4 @@ const supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYm
 
 // Crear y exportar el cliente de Supabase
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+

@@ -4,10 +4,11 @@ import { supabase } from "../supabaseClient"; // Asegúrate de que la ruta sea c
 function Citas() {
   const [citas, setCitas] = useState([]);
   const [formData, setFormData] = useState({
-    nombre: "",
+    identificacion: "",
+    id_medico: "",
     fecha: "",
-    hora: "",
     motivo: "",
+    estado: "pendiente", // Estado por defecto
   });
 
   const handleChange = (e) => {
@@ -22,10 +23,11 @@ function Citas() {
       .from("citas") // Asegúrate de que la tabla en Supabase se llame "citas"
       .insert([
         {
-          nombre: formData.nombre,
+          identificacion: formData.identificacion,
+          id_medico: formData.id_medico,
           fecha: formData.fecha,
-          hora: formData.hora,
           motivo: formData.motivo,
+          estado: formData.estado, // Puedes cambiar el estado si lo deseas
         },
       ]);
 
@@ -33,7 +35,13 @@ function Citas() {
       alert("Error al registrar la cita: " + error.message);
     } else {
       setCitas([...citas, data[0]]); // Agrega la cita registrada a la lista
-      setFormData({ nombre: "", fecha: "", hora: "", motivo: "" }); // Limpia el formulario
+      setFormData({
+        identificacion: "",
+        id_medico: "",
+        fecha: "",
+        motivo: "",
+        estado: "pendiente", // Limpia el formulario
+      });
       alert("Cita registrada con éxito");
     }
   };
@@ -64,11 +72,11 @@ function Citas() {
       <h2>Registrar Nueva Cita</h2>
       <form onSubmit={handleSubmit}>
         <label>
-          Nombre del Paciente:
+          Identificación del Paciente:
           <input
-            type="text"
-            name="nombre"
-            value={formData.nombre}
+            type="number"
+            name="identificacion"
+            value={formData.identificacion}
             onChange={handleChange}
             required
           />
@@ -76,23 +84,23 @@ function Citas() {
         <br />
 
         <label>
-          Fecha:
+          Identificación del Médico:
           <input
-            type="date"
+            type="number"
+            name="id_medico"
+            value={formData.id_medico}
+            onChange={handleChange}
+            required
+          />
+        </label>
+        <br />
+
+        <label>
+          Fecha y Hora:
+          <input
+            type="datetime-local"
             name="fecha"
             value={formData.fecha}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <br />
-
-        <label>
-          Hora:
-          <input
-            type="time"
-            name="hora"
-            value={formData.hora}
             onChange={handleChange}
             required
           />
@@ -120,9 +128,9 @@ function Citas() {
         <ul>
           {citas.map((cita, index) => (
             <li key={index}>
-              <strong>{cita.nombre}</strong> - {cita.fecha} a las {cita.hora}
+              <strong>Paciente ID {cita.identificacion}</strong> - Fecha: {cita.fecha} 
               <br />
-              Motivo: {cita.motivo}
+              Médico ID: {cita.id_medico} | Motivo: {cita.motivo} | Estado: {cita.estado}
             </li>
           ))}
         </ul>
